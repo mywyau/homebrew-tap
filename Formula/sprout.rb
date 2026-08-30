@@ -1,8 +1,8 @@
 class Sprout < Formula
   desc "Fast, simple, opinionated build tool for ordinary Scala projects"
   homepage "https://github.com/mywyau/sprout"
-  url "https://github.com/mywyau/sprout/releases/download/v0.2.7/sprout-0.2.7.tar.gz"
-  sha256 "e8eb2bb7bca930d88d831687813ba2a1006a37bbb4a2e3ba71e5e6d95d29a8d3"
+  url "https://github.com/mywyau/sprout/releases/download/v0.2.8/sprout-0.2.8.tar.gz"
+  sha256 "8111203fe30c440605f706f7f28e9544d949b2dc0572748c1fe06933dccf46ca"
   license "MIT"
 
   depends_on "openjdk@21"
@@ -17,7 +17,7 @@ class Sprout < Formula
   end
 
   test do
-    assert_match "Sprout 0.2.7", shell_output("#{bin}/sprout --version")
+    assert_match "Sprout 0.2.8", shell_output("#{bin}/sprout --version")
     (testpath/"sprout.toml").write <<~TOML
       [project]
       name = "formula-test"
